@@ -1,0 +1,22 @@
+{
+  "name": "@mohayonao/fluxx",
+  "description": "simple flux",
+  "version": "0.0.0",
+  "author": "mohayonao <mohayonao@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/mohayonao/fluxx/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "homepage": "https://github.com/mohayonao/fluxx/",
+  "keywords": [
+    "flux"
+  ],
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/mohayonao/fluxx.git"
+  },
+  "scripts": {}
+}
