@@ -20,6 +20,8 @@ npm install @mohayonao/fluxx
 - `stores: Store[]`
 
 #### Instance methods
+_Also implements methods from the interface [@mohayonao/event-emitter](https://github.com/mohayonao/event-emitter)._
+
 - `getStateFromStores(): object`
 - `createAction(address: string, data: any): void`
 - `addChangeListener(listener: function): void`
