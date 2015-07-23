@@ -1,6 +1,10 @@
 import EventEmitter from "@mohayonao/event-emitter";
 import { LOCKED, CHANGE_EVENT, EMIT_CHANGE, DONE_ACTION } from "./symbols";
 
+const setImmediate = global.setImmediate || function(callback) {
+  setTimeout(callback, 0);
+};
+
 export default class Router extends EventEmitter {
   constructor() {
     super();
