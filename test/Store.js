@@ -1,6 +1,5 @@
 import assert from "power-assert";
 import sinon from "sinon";
-import { Delegator } from "@mohayonao/dispatcher";
 import { EMIT_CHANGE } from "../src/symbols";
 import Router from "../src/Router";
 import Store from "../src/Store";
@@ -17,7 +16,6 @@ describe("Store", () => {
       let store = new Store(router);
 
       assert(store instanceof Store);
-      assert(store instanceof Delegator);
     });
     it("fails", () => {
       assert.throws(() => {

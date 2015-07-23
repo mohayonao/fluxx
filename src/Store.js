@@ -1,11 +1,8 @@
-import { Delegator } from "@mohayonao/dispatcher";
 import { EMIT_CHANGE } from "./symbols";
 import Router from "./Router";
 
-export default class Store extends Delegator {
+export default class Store {
   constructor(router) {
-    super();
-
     if (!(router instanceof Router)) {
       throw new TypeError("Store.constructor requires an instance of Router");
     }
