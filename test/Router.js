@@ -4,7 +4,7 @@ import fs from "fs";
 import path from "path";
 import assert from "power-assert";
 import sinon from "sinon";
-import { Duplex } from "@mohayonao/dispatcher";
+import EventEmitter from "@mohayonao/event-emitter";
 import { CHANGE_EVENT } from "../src/symbols";
 import Router from "../src/Router";
 import Action from "../src/Action";
@@ -17,7 +17,7 @@ describe("Router", () => {
       let router = new Router();
 
       assert(router instanceof Router);
-      assert(router instanceof Duplex);
+      assert(router instanceof EventEmitter);
       assert(Array.isArray(router.actions));
       assert(Array.isArray(router.stores));
     });

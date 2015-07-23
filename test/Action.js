@@ -1,6 +1,5 @@
 import assert from "power-assert";
 import sinon from "sinon";
-import { Delegator } from "@mohayonao/dispatcher";
 import { DONE_ACTION } from "../src/symbols";
 import Router from "../src/Router";
 import Action from "../src/Action";
@@ -17,7 +16,6 @@ describe("Action", () => {
       let action = new Action(router);
 
       assert(action instanceof Action);
-      assert(action instanceof Delegator);
     });
     it("fails", () => {
       assert.throws(() => {

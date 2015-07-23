@@ -1,7 +1,7 @@
-import { Duplex } from "@mohayonao/dispatcher";
+import EventEmitter from "@mohayonao/event-emitter";
 import { LOCKED, CHANGE_EVENT, EMIT_CHANGE, DONE_ACTION } from "./symbols";
 
-export default class Router extends Duplex {
+export default class Router extends EventEmitter {
   constructor() {
     super();
 
@@ -33,8 +33,8 @@ export default class Router extends Duplex {
   createAction(address, data) {
     if (typeof address === "string" && address[0] === "/") {
       this.actions.forEach((action) => {
-        if (typeof action.delegate === "function") {
-          action.delegate(address, data);
+        if (typeof action[address] === "function") {
+          action[address](data);
         }
       });
     }
@@ -51,8 +51,8 @@ export default class Router extends Duplex {
   [DONE_ACTION](address, data) {
     if (typeof address === "string" && address[0] === "/") {
       this.stores.forEach((store) => {
-        if (typeof store.delegate === "function") {
-          store.delegate(address, data);
+        if (typeof store[address] === "function") {
+          store[address](data);
         }
       });
     }

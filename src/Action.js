@@ -1,11 +1,8 @@
-import { Delegator } from "@mohayonao/dispatcher";
 import { DONE_ACTION } from "./symbols";
 import Router from "./Router";
 
-export default class Action extends Delegator {
+export default class Action {
   constructor(router) {
-    super();
-
     if (!(router instanceof Router)) {
       throw new TypeError("Action.constructor requires an instance of Router");
     }
