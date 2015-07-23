@@ -1,7 +1,7 @@
 {
   "name": "@mohayonao/fluxx",
-  "description": "simple flux",
-  "version": "0.0.0",
+  "description": "simple implementation of Flux architecture",
+  "version": "0.1.0",
   "author": "mohayonao <mohayonao@gmail.com>",
   "bugs": {
     "url": "https://github.com/mohayonao/fluxx/issues"
