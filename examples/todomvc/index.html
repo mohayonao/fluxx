@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>@mohayonao/fluxx • TodoMVC</title>
+    <link rel="stylesheet" href="todomvc-common/base.css">
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+    <section id="todoapp"></section>
+    <footer id="info">
+      <p>Double-click to edit a todo</p>
+      <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+    </footer>
+    <script src="https://fb.me/react-0.13.3.min.js"></script>
+    <script src="./bundle.js"></script>
+    <script>
+    window.onload = function() {
+      TodoApp.run();
+    };
+    </script>
+  </body>
+</html>
